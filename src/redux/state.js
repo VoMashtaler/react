@@ -11,10 +11,10 @@ let state = {
         dialogs: [
             { id: 1, name: 'Котя' },
             { id: 2, name: 'Мамуся' },
-            { id: 3, name: 'Татусь' },
+            { id: 3, name: 'Татусь'},
             { id: 4, name: 'Персик' },
             { id: 5, name: 'Руслан' },
-            { id: 6, name: 'Бот' },
+            { id: 6, name: 'Бот' }
         ],
         messages: [
             { id: 1, message: 'Привіт' },
@@ -23,7 +23,18 @@ let state = {
             { id: 4, message: 'Yo' },
             { id: 5, message: 'Yo' },
         ]
+    }, 
+    navbarPage: {
+        friends: [
+            { id: 1, name: 'Котя', status: 'on' },
+            { id: 2, name: 'Мамуся', status: 'off' },
+            { id: 3, name: 'Татусь', status: 'on' },
+            { id: 4, name: 'Персик', status: 'on' },
+            { id: 5, name: 'Руслан', status: 'off' },
+            { id: 6, name: 'Бот', status: 'on' },
+        ]
     }
+
 }
 
 export default state;
