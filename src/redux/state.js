@@ -18,12 +18,12 @@ let store = {
         },
         dialogsPage: {
             dialogs: [
-                { id: 1, name: 'Котя' },
-                { id: 2, name: 'Мамуся' },
-                { id: 3, name: 'Татусь' },
-                { id: 4, name: 'Персик' },
-                { id: 5, name: 'Руслан' },
-                { id: 6, name: 'Бот' }
+                { id: 1, name: 'Перший бот' },
+                { id: 2, name: 'Другий бот' },
+                { id: 3, name: 'Третій бот' },
+                { id: 4, name: 'Четвертий бот' },
+                { id: 5, name: 'Пятий бот' },
+                { id: 6, name: 'Шостий бот' }
             ],
             messages: [
                 { id: 1, message: 'Привіт' },
@@ -36,12 +36,12 @@ let store = {
         },
         navbarPage: {
             friends: [
-                { id: 1, name: 'Котя', status: 'on' },
-                { id: 2, name: 'Мамуся', status: 'off' },
-                { id: 3, name: 'Татусь', status: 'on' },
-                { id: 4, name: 'Персик', status: 'on' },
-                { id: 5, name: 'Руслан', status: 'off' },
-                { id: 6, name: 'Бот', status: 'on' },
+                { id: 1, name: 'Перший бот', status: 'on' },
+                { id: 2, name: 'Другий бот', status: 'off' },
+                { id: 3, name: 'Третій бот', status: 'on' },
+                { id: 4, name: 'Четвертий бот', status: 'on' },
+                { id: 5, name: 'Пятий бот', status: 'off' },
+                { id: 6, name: 'Шостий бот', status: 'on' },
             ]
         }
 
