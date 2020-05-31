@@ -5,15 +5,7 @@ const SET_USERS = 'SET_USERS';
 
 let initialState = {
      users: [
-         { id: 1, photoUrl: 'file:///C:/Users/User/Desktop/TheMASK/Logo1.jpg', 
-         followed: false, fullName: 'Somebody1', status: "I am number 1", location: { city: 'Lviv', country: 'Ukraine' } },
-         { id: 2, photoUrl: 'C:/Users/User/Desktop/TheMASK/Logo1.jpg', 
-         followed: true, fullName: 'Somebody2', status: "I am number 2", location: { city: 'Kyiv', country: 'Ukraine' } },
-         { id: 3, photoUrl: 'C:/Users/User/Desktop/TheMASK/Logo1.jpg',
-          followed: true, fullName: 'Somebody3', status: "I am number 3", location: { city: 'Warszaw', country: 'Poland' } },
-         { id: 4, photoUrl: 'C:/Users/User/Desktop/TheMASK/Logo1.jpg',
-          followed: false, fullName: 'Somebody4', status: "I am number 4", location: { city: 'Berlin', country: 'Germany' } },
-
+         
      ]
 };
 
