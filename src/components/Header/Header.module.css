@@ -5,7 +5,7 @@
 .header img {
     width: 70px;
 }
-.loginBlock {
-    float: right;
+.loginBlock {    
+    float: left;
     background-color: rgb(247, 247, 247);
 }
