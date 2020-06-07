@@ -8,3 +8,10 @@
 {
     color: antiquewhite;
 }
+
+.formSummaryError {
+    background-color: olivedrab;
+    border:  green 2 px solid;
+    padding: 5px;
+    color: rgb(248, 246, 241);
+}
