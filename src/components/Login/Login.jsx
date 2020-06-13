@@ -17,7 +17,7 @@ const LoginForm = ({handleSubmit, error, captchaUrl}) => {
                 component={Input}/>
             </div>
             <div>
-                <Field placeholder={"Password"} name={"password"} type={"password"}
+                <Field placeholder={"Password"} name={"password"} type={"password"} //old version createField
                 validate={[required]}
                 component={Input}/>
             </div>
