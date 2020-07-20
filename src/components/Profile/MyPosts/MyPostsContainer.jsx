@@ -3,8 +3,7 @@ import { addPostActionCreator } from '../../../redux/profile-reducer';
 import MyPosts from './MyPosts';
 import { connect } from 'react-redux';
 
-
-
+//container component for security
 
 
 const mapStateToProps = (state) => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Post.module.css';
 
-
+// post on main page
 const Post = (props) => {
 
     

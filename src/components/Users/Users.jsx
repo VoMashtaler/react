@@ -2,6 +2,7 @@ import React from 'react';
 import User from './User';
 import Paginator from '../common/Paginator/Paginator';
 
+// show al registered users
 
 let Users = ({currentPage, totalItemsCount, pageSize, onPageChanged, users, ...props}) => {
 

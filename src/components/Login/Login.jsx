@@ -7,7 +7,7 @@ import { login } from '../../redux/auth-reducer';
 import { Redirect } from 'react-router-dom';
 import style from '../common/FormsControls/FormsControls.module.css'
 
-
+// Login Form for test auth use: login: gouber.park@gmail.com pass: 1q2w3e4r5t
 const LoginForm = ({handleSubmit, error, captchaUrl}) => {
     return (
         <form onSubmit={handleSubmit}>

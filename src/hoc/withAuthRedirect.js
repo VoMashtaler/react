@@ -2,6 +2,8 @@ import React from "react";
 import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 
+// high order component for authentification
+
 let mapStateToPropsForRedirect = (state) => ({
     isAuth: state.auth.isAuth
 });

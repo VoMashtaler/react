@@ -6,7 +6,7 @@ import { required, maxLengthCreator } from '../../../utils/validators/validation
 import { Textarea } from '../../common/FormsControls/FormsControls';
 
 const maxLength10 = maxLengthCreator(10);
-
+//post field with everythng required
 const AddNewPostForm = (props) => {
    
     return (
@@ -21,8 +21,8 @@ const AddNewPostForm = (props) => {
         </form>
     )
 }
-
-//AddNewPostsForm = reduxForm({form: "ProfileAddNewPostsForm"})(AddNewPostForm);
+// using Redux-Form
+////AddNewPostsForm = reduxForm({form: "ProfileAddNewPostsForm"})(AddNewPostForm);
 const AddNewPostsForm = reduxForm ({
      form: 'ProfileAddNewPostsForm'
  })(AddNewPostForm);

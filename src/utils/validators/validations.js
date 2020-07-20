@@ -1,3 +1,4 @@
+//reusable validator to connect on every pages
 export const required = value => {
     if (value) return undefined;
     return 'Required';

@@ -7,6 +7,7 @@ import Preloader from '../common/loader/loader';
 import { compose } from 'redux';
 import { getUsersSel, getPageSize, getTotalUsersCount, getCurrentPage, getIsFetching, getFollowingInProgress } from '../../redux/users-selectors';
 
+// container users for security
 
 class UsersContainer extends React.Component {
 

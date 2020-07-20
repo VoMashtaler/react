@@ -3,6 +3,7 @@ import styles from "./users.module.css"
 import usersPhoto from '../../assets/images/user1.png';
 import { NavLink } from 'react-router-dom';
 
+//show user info from server
 
 let User = ({user, followingInProgress, unfollow, follow}) => {
 
