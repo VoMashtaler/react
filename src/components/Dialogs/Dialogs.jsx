@@ -8,15 +8,17 @@ import { Textarea } from "../common/FormsControls/FormsControls";
 import { required, maxLengthCreator } from '../../utils/validators/validations';
 
 
+// dialogs page with future work messanger
+
 const Dialogs = (props) => {
 
     let state = props.dialogsPage;
 
     let dialogsElements = state.dialogs
-        .map(d => <Dialog name={d.name} key={d.id} id={d.id} />);
+        .map(d => <Dialog name={d.name} key={d.id} id={d.id} />); //user id for chat
 
     let messagesElements = state.messages
-        .map(m => <Message message={m.message} key={m.id} />);
+        .map(m => <Message message={m.message} key={m.id} />); //message id for chat
 
     //let newMessageBody = state.newMessageBody;   
     
@@ -24,7 +26,7 @@ const Dialogs = (props) => {
        props.sendMessage(values.newMessageBody)
     }
 
-    if (!props.isAuth) return <Redirect to={'/login'} />;
+    if (!props.isAuth) return <Redirect to={'/login'} />; // if not login, than redirect to login page
 
 
     return (
@@ -42,6 +44,8 @@ const Dialogs = (props) => {
     )
 }
 const maxLength50 = maxLengthCreator(50);
+
+//field to enter message
 
 const AddMessageForm = (props) => {
     return (

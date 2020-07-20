@@ -3,7 +3,7 @@ import styles from '../FormsControls/FormsControls.module.css'
 import { Field } from 'redux-form';
 
 
-
+// reusable form 
 const FormControl = ({input, meta, child, ...props}) => {
     const hasError = meta.touched && meta.error;
 return (

@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./../Dialogs.module.css";
 
-
+// message in chat
 
 const Message = (props) => {
 

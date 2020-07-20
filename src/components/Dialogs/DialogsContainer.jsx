@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { withAuthRedirect } from "../../hoc/withAuthRedirect";
 import { compose } from "redux";
 
-
+//container component for secure
 let mapStateToProps = (state) => {
     return {
         dialogsPage: state.dialogsPage

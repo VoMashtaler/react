@@ -1,6 +1,6 @@
 import * as axios from "axios";
 
-
+// Main const for all connection with server
 const instance = axios.create({
     withCredentials: true,
     baseURL: 'https://social-network.samuraijs.com/api/1.0/',
@@ -9,6 +9,7 @@ const instance = axios.create({
     }
 });
 
+// connect user accounts
 export const usersAPI = {
     getUsers(currentPage = 1, pageSize = 5) {
         return instance.get(`users?page=${currentPage}&count=${pageSize}`)
@@ -27,6 +28,8 @@ export const usersAPI = {
         return profileAPI.getProfile(userId)            
     }
 };
+
+// connect all information about user profile
 export const profileAPI = {
     getProfile(userId) {
         return instance.get(`profile/`+userId);            
@@ -51,6 +54,7 @@ export const profileAPI = {
     }
 };
 
+//capthca for safety authentification
 export const authAPI = {
     authMe () {
         return instance.get(`auth/me`);

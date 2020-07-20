@@ -1,7 +1,7 @@
 import React, { Component} from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import { Route, withRouter } from 'react-router-dom';
+import { Route, withRouter, HashRouter, Redirect } from 'react-router-dom';
 import Music from './components/Music/Music';
 import News from './components/News/News';
 import Settings from './components/Settings/Settings';
@@ -15,12 +15,17 @@ import { compose } from 'redux';
 import Preloader from './components/common/loader/loader';
 import { initializeApp } from './redux/app-reducer';
 import { withSuspense } from './hoc/withSuspense';
+import {Provider} from "react-redux";
+import store from './redux/redux-store';
+
 
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'))
 
 class App extends Component {
+  //catchAllUnhandledError
   componentDidMount() {
     this.props.initializeApp();
+   // window.addEventListener("unhandledrejection", function(promiseRejectionEvent){ });
 }
 render() {
   if (!this.props.initialized) {
@@ -32,6 +37,8 @@ render() {
       <HeaderContainer />
       <Navbar />
       <div className="app-wrapper-content">
+      <Route exact path="/"
+          render={() => <Redirect to={"/profile"} />} />
         <Route path="/dialogs"
             render={withSuspense(DialogsContainer)} />
         <Route path="/profile/:userId?"
@@ -43,6 +50,8 @@ render() {
         <Route path="/settings" component={Settings} />
         <Route path="/login"
           render={() => <LoginPage />} />
+        {/* <Route path="*"
+          render={() => <div>404 NOT FOUND</div>} /> */}
 
       </div>
     </div>
@@ -53,6 +62,16 @@ const mapStateToProps = (state) => ({
   initialized: state.app.initialized
 })
 
-export default compose(
+let AppContainer = compose(
   withRouter,
   connect(mapStateToProps, { initializeApp}))(App);
+
+  const ShoomApp = (props) => {
+    return <HashRouter basename={process.env.PUBLIC_URL}>
+            <Provider store={store}>
+                <AppContainer />
+            </Provider>
+        </HashRouter>
+  }
+
+  export default ShoomApp;
